@@ -1,13 +1,17 @@
-# Static content server, with support for adding API endpoints using Silex
-*powered by Silex, PHP, MongoDB, and Leaflet maps*
+# A basic Silex server example
+*powered by PHP and Silex*
 
-To deploy a clone of this application using the [`rhc` command line tool](http://rubygems.org/gems/rhc):
+To host this project locally ([PHP-5.4 or better required](http://us3.php.net/manual/en/features.commandline.webserver.php)), run:
 
-    rhc app create static php-5.4 --from-code=https://github.com/ryanj/silex-static.git
+    php -S localhost:8080 -t static app.php
+
+To spin up a new copy of this application on an OpenShift-powered cloud, use the [`rhc` command line tool](http://rubygems.org/gems/rhc):
+
+    rhc app create silex php-5.4 --from-code=https://github.com/ryanj/silex-base.git
     
-Or [link to a web-based clone+deploy](https://openshift.redhat.com/app/console/application_type/custom?cartridges%5B%5D=php-5.3&cartridges%5B%5D=mongodb-2.2&initial_git_url=https%3A%2F%2Fgithub.com%2Fopenshift-quickstart%2Fsilex-mongodb-parks.git) on [OpenShift Online](http://OpenShift.com) or on [your own OpenShift cloud](http://openshift.github.io): 
+Or [link to a web-based clone+deploy](https://openshift.redhat.com/app/console/application_type/custom?cartridges%5B%5D=php-5.4&initial_git_url=https%3A%2F%2Fgithub.com%2Fryanj%2Fsilex-base.git) on [OpenShift Online](http://OpenShift.com) or on [your own OpenShift cloud](http://openshift.github.io): 
 
-    https://openshift.redhat.com/app/console/application_type/custom?cartridges%5B%5D=php-5.3&cartridges%5B%5D=mongodb-2.2&initial_git_url=https%3A%2F%2Fgithub.com%2Fopenshift-quickstart%2Fsilex-mongodb-parks.git
+    https://openshift.redhat.com/app/console/application_type/custom?cartridges%5B%5D=php-5.4&initial_git_url=https%3A%2F%2Fgithub.com%2Fryanj%2Fsilex-base.git
 
 ## License
 This code is dedicated to the public domain to the maximum extent permitted by applicable law, pursuant to CC0 (http://creativecommons.org/publicdomain/zero/1.0/)
