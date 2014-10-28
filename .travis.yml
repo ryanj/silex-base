@@ -2,6 +2,17 @@ language: php
 php:
   - 5.5
   - 5.4
+  - 5.3
 install:
   - composer install
 script: "php -r 'exit(0);'"
+# more information on configuring openshift deployments
+# http://docs.travis-ci.com/user/deployment/openshift/
+deploy:
+  provider: openshift
+  # Configure these values on your TravisCI 'Repository Settings' page:
+  # http://docs.travis-ci.com/user/environment-variables/#Using-Settings
+  user: $OPENSHIFT_USERNAME
+  password: $OPENSHIFT_PASSWORD
+  app: $OPENSHIFT_APP_NAME
+  domain: $OPENSHIFT_APP_NAMESPACE
