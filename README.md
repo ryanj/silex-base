@@ -7,13 +7,9 @@ To host this project locally ([PHP-5.4 or better required](http://us3.php.net/ma
 
     php -S localhost:8080 -t static app.php
 
-To spin up a new copy of this application on an OpenShift-powered cloud, use the [`rhc` command line tool](http://rubygems.org/gems/rhc):
+To spin up a new copy of this application on OpenShift, use the [`oc` command line tool](http://github.com/openshift/origin/releases):
 
-    rhc app create silex php-5.4 --from-code=https://github.com/ryanj/silex-base.git
+    oc new-app php~https://github.com/ryanj/silex-base.git
     
-Or [link to a web-based clone+deploy](https://openshift.redhat.com/app/console/application_type/custom?cartridges%5B%5D=php-5.4&initial_git_url=https%3A%2F%2Fgithub.com%2Fryanj%2Fsilex-base.git) on [OpenShift Online](http://OpenShift.com) or on [your own OpenShift cloud](http://openshift.github.io): 
-
-    https://openshift.redhat.com/app/console/application_type/custom?cartridges%5B%5D=php-5.4&initial_git_url=https%3A%2F%2Fgithub.com%2Fryanj%2Fsilex-base.git
-
 ## License
 This code is dedicated to the public domain to the maximum extent permitted by applicable law, pursuant to CC0 (http://creativecommons.org/publicdomain/zero/1.0/)
